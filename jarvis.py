@@ -9,7 +9,6 @@ import random
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-#voices[0].id = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0
 print(voices[0].id)
 engine.setProperty('voice', voices[0].id)
 engine.setProperty('rate', 150)
@@ -46,15 +45,15 @@ def takeCommand(): #takes microphone input from the user and returns string outp
         print("Say that again please....")
         return "None"
     return query
-'''
+
 def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('emailid', 'password')
-    server.sendmail('shreytripathi27@gmail.com', to, content)
+    server.login('your-email-id@gmail.com', 'your-password')
+    server.sendmail('your-email-id@gmail.com, to, content)
     server.close()
-'''
+
 
 if __name__ == '__main__':
     wishMe()
@@ -98,18 +97,18 @@ if __name__ == '__main__':
         elif 'quit' in query:
             speak("Alright, sir. Bye Bye..")
             exit()
-'''
-        elif 'email to shrey' in query:
+
+        elif 'email to anon' in query:
             try:
                 speak('What should I say?')
                 content = takeCommand()
-                to = 'shreytripathi27@gmail.com'
+                to = 'your-email-id@gmail.com'
                 sendEmail(to, content)
                 speak("Email has been sent successfully")
             except Exception as e:
                 print(e)
                 speak("Sorry, I couldn't send the email")
-'''        
+    
         
 
             
