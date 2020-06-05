@@ -79,7 +79,7 @@ if __name__ == '__main__':
             webbrowser.open("stackoverflow.com")
         
         elif 'music' in query:
-            music_dir = 'C:\\Users\\prd\\Desktop\\Shrey\\Music'
+            music_dir = 'path_to_music_folder'
             songs = os.listdir(music_dir)
             print(songs)
             length = len(songs)
@@ -91,7 +91,7 @@ if __name__ == '__main__':
             speak(f"The time is {strTime}") 
 
         elif 'code' in query:
-            codePath = "C:\\Users\\prd\\Desktop\\Microsoft VS Code\\Code.exe"         
+            codePath = "path_to_vscode_exe_file"         
             os.startfile(codePath)
 
         elif 'quit' in query:
